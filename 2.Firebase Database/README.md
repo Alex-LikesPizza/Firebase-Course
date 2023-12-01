@@ -1,1 +1,1 @@
-#Run 'npm i' before launch
+# Run 'npm i' before launch
