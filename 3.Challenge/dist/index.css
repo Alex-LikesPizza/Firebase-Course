@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: sans-serif;
+  background-image: radial-gradient(rgb(240, 240, 240), rgb(195, 195, 195));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+form{
+  margin: 1rem auto;
+  background-color: rgb(49, 46, 46);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  & label{
+    color: white;
+    font-size: 1.4rem;
+  }
+  & input{
+    font-size: 1.2rem;
+    width: clamp(30ch, 40vw, 80ch);
+  }
+
+  & button{
+    width: fit-content;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+    border: none;
+    margin-top: 1rem;
+    background-color: rgb(211, 211, 211);
+    border-radius: 1rem;
+  }
+}
+
+.tasks{
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 1rem;
+  background-color: rgb(200, 200, 200);
+  width: fit-content;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  width: clamp(30ch, 40vw, 80ch);
+
+  & li{
+    background-color: rgb(46, 42, 42);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+  }
+  & li:not(:last-child){
+    margin-bottom: 1rem;
+  }
+  & .tasks-delete{
+    position: absolute;
+    right: 0.6rem;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    transform: translateY(-8%);
+    
+  }
+  & .tasks-date{
+    position: absolute;
+    left: 65%;
+    color: rgb(102, 102, 102);
+  }
+}
